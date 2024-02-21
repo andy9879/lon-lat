@@ -14,16 +14,16 @@ npm install coordinate-converter
 const lonLat = require("lon-lat");
 
 // Convert DMS to Decimal
-const latitudeDecimal = lonLat.dmsToDecimal(37, 30, 0, "N");
-const longitudeDecimal = lonLat.dmsToDecimal(122, 15, 0, "W");
+const latitudeDecimal = lonLat.dmsToDecimal(37, 30, 43);
+const longitudeDecimal = lonLat.dmsToDecimal(-122, 15, 27);
 
-console.log("Latitude (Decimal):", latitudeDecimal);
-console.log("Longitude (Decimal):", longitudeDecimal);
+console.log("Latitude (Decimal):", latitudeDecimal); //prints 'Latitude (Decimal): 37.51194444'
+console.log("Longitude (Decimal):", longitudeDecimal); //prints 'Longitude (Decimal): -122.2575'
 
 // Convert Decimal to DMS
 const latitudeDMS = lonLat.decimalToDMS(latitudeDecimal);
 const longitudeDMS = lonLat.decimalToDMS(longitudeDecimal);
 
-console.log("Latitude (DMS):", latitudeDMS);
-console.log("Longitude (DMS):", longitudeDMS);
+console.log("Latitude (DMS):", latitudeDMS); //prints 'Latitude (DMS): [ 37, 30, 43 ]'
+console.log("Longitude (DMS):", longitudeDMS); //prints 'Longitude (DMS): [ -122, 15, 27 ]'
 ```
